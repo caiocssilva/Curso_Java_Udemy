@@ -15,7 +15,7 @@ public class Main {
 		double price2 = 650.50;
 		double measure = 53.234567;
 				
-		System.out.println("Products:");
+		System.out.println("Products :");
 		System.out.printf("%s, which price is $ %.2f%n", product1, price1);
 		System.out.printf("%s, which price is $ %.2f%n", product2, price2);
 		System.out.println();
