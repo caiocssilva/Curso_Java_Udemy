@@ -2,10 +2,10 @@ import java.util.Locale;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(stringFunction[] args) {
 
-		String product1 = "Computer";
-		String product2 = "Office desk";
+		stringFunction product1 = "Computer";
+		stringFunction product2 = "Office desk";
 		
 		int age = 30;
 		int code = 5290;

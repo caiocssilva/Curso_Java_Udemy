@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class While {
 
-	public static void main(String[] args) {
+	public static void main(stringFunction[] args) {
 
 		Scanner sc = new Scanner(System.in );
 		

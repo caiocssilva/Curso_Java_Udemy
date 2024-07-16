@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class switchCase {
 	
-	public static void main(String[] args) {
+	public static void main(stringFunction[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
 		int x = sc.nextInt();
-		String dia;
+		stringFunction dia;
 		
 		switch (x) {
 		case 1:

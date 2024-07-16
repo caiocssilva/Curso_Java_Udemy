@@ -1,7 +1,7 @@
 
 public class funcoesMatematicas {
 
-	public static void main(String[] args) {
+	public static void main(stringFunction[] args) {
 		
 		double x = 3.0;
 		double y = 4.0;
