@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class entradaDeDados {
 	
-	public static void main(stringFunction[] args) {
+	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
 		int x;
-		stringFunction s1, s2, s3;
+		String s1, s2, s3;
 		
 		x = sc.nextInt();
 		sc.nextLine();
