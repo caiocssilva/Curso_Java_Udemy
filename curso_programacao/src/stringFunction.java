@@ -5,14 +5,14 @@ public class stringFunction {
 
 		String original = "abcde FGHIJ abc DEFG    ";
 		
-		String s01 = original.toLowerCase();
-		String s02 = original.toUpperCase();
-		String s03 = original.trim();
-		String s04 = original.substring(2);
-		String s05 = original.substring(2, 9);
-		String s06 = original.replace('a', 'x');
-		String s07 = original.replace("abc", "xy");
-		int i = original.indexOf("bc");
+		String s01 = original.toLowerCase();     // Transforma para minusculo 
+		String s02 = original.toUpperCase();	 // Transforma para maiusculo
+		String s03 = original.trim();			 // Remove espaços
+		String s04 = original.substring(2);		 // Recorta String
+		String s05 = original.substring(2, 9);	 // Recorta String, começo e fim
+		String s06 = original.replace('a', 'x'); // Substituir caracteres
+		String s07 = original.replace("abc", "xy"); // Substituir Strings
+		int i = original.indexOf("bc");				// Busca posição de alguma parte de String
 		int j = original.lastIndexOf("bc"); 
 		
 		System.out.println("Original: -" + original + "-");
@@ -28,7 +28,7 @@ public class stringFunction {
 		
 		String s = "potato apple lemon";
 		
-		String[] vect = s.split(" ");
+		String[] vect = s.split(" ");  // Recorta String com base em separador
 		
 		System.out.println(vect[0]);	
 		System.out.println(vect[1]);	
