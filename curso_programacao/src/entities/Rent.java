@@ -1,15 +1,13 @@
 package entities;
 
-public class UserPensionato {
+public class Rent {
 
 	private String name;
 	private String email;
-	private int room;
 	
-	public UserPensionato(String name, String email, int room) {
+	public Rent(String name, String email) {
 		this.name = name;
 		this.email = email;
-		this.room = room;
 	}
 	public String getName() {
 		return name;
@@ -23,11 +21,10 @@ public class UserPensionato {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getRoom() {
-		return room;
-	}
-	public void setRoom(int room) {
-		this.room = room;
+
+	@Override
+	public String toString() {
+		return name + ", " + email;
 	}
 	
 }

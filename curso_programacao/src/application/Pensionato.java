@@ -1,7 +1,7 @@
 package application;
 
 import java.util.Scanner;
-import entities.UserPensionato;
+import entities.Rent;
 
 public class Pensionato {
 
@@ -9,21 +9,34 @@ public class Pensionato {
 
 		Scanner sc = new Scanner(System.in);
 		
+		Rent[] vect = new Rent[10];
+
+		
 		System.out.print("How many rooms will be rented? ");
 		int n = sc.nextInt();
-		
-		UserPensionato[] vect = new UserPensionato[n];
-		
-		for (int i=0; i<vect.length; i++) {
+				
+		for (int i = 1; i <= n; i++) {
+			System.out.println();
 			sc.nextLine();
+			System.out.println("Rent #" + i + ":");
 			System.out.print("Name: ");
 			String name = sc.nextLine();
 			System.out.print("Email: ");
-			String email = sc.nextLine();
-			System.out.println("Room: ");
+			String email = sc.next();
+			System.out.print("Room: ");
 			int room = sc.nextInt();
-			vect[i] = new UserPensionato(name, email, room);
+			
+			vect [room] = new Rent(name, email);
 		}
+		
+		System.out.println();
+		System.out.println("Busy rooms:");
+		for (int i = 0; i < 10; i++) {
+			if (vect[i] != null) {
+				System.out.println(i + ": " + vect[i]);
+			}
+		}
+		
 		
 		sc.close();
 	}
