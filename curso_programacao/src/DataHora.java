@@ -1,6 +1,7 @@
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class DataHora {
@@ -9,8 +10,10 @@ public class DataHora {
 			
 		DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
+		DateTimeFormatter fmt4 = DateTimeFormatter.ISO_DATE_TIME;
 
-		
+
 		LocalDate d01 = LocalDate.now();
 		LocalDateTime d02 = LocalDateTime.now();
 		Instant d03 = Instant.now();
@@ -25,8 +28,6 @@ public class DataHora {
 		
 		LocalDate d10 = LocalDate.of(2024, 8, 19);
 		LocalDateTime d11 = LocalDateTime.of(2024, 8, 20, 1, 30);
-
-
 		
 		System.out.println(d01);
 		System.out.println(d02);
@@ -39,6 +40,15 @@ public class DataHora {
 		System.out.println(d09);
 		System.out.println(d10);
 		System.out.println(d11);
+		System.out.println("");
+		System.out.println(d04.format(fmt1));
+		System.out.println(fmt1.format(d04));
+		System.out.println(fmt2.format(d05));
+		System.out.println(fmt3.format(d06));
+		System.out.println(fmt4.format(d05));
+
+
+
 
 
 		
