@@ -20,7 +20,7 @@ public class DataHora {
 		
 		LocalDate d04 = LocalDate.parse("2024-08-19");
 		LocalDateTime d05 = LocalDateTime.parse("2024-08-19T09:30:55");
-		Instant d06 = Instant.parse("2024-08-19T09:30:55Z");
+		Instant d06 = Instant.parse("2024-08-19T01:30:55Z");
 		Instant d07 = Instant.parse("2024-08-19T09:30:55-03:00");
 
 		LocalDate d08 = LocalDate.parse("20/08/2024", fmt1);
@@ -46,6 +46,33 @@ public class DataHora {
 		System.out.println(fmt2.format(d05));
 		System.out.println(fmt3.format(d06));
 		System.out.println(fmt4.format(d05));
+		
+		System.out.println("");
+		
+		LocalDate r1 = LocalDate.ofInstant(d06, ZoneId.systemDefault());
+		LocalDate r2 = LocalDate.ofInstant(d06, ZoneId.of("Portugal"));
+		LocalDateTime r3 = LocalDateTime.ofInstant(d06, ZoneId.systemDefault());
+		LocalDateTime r4 = LocalDateTime.ofInstant(d06, ZoneId.of("Portugal"));
+
+
+		
+		System.out.println(r1);
+		System.out.println(r2);
+		System.out.println(r3);
+		System.out.println(r4);
+		
+		System.out.println("");
+
+		System.out.println("d04 dia = " + d04.getDayOfMonth());
+		System.out.println("d04 mês = " + d04.getMonthValue());
+		System.out.println("d04 ano = " + d04.getYear());
+		
+		System.out.println("d05 hora = " + d05.getHour());
+
+
+
+
+
 
 
 
