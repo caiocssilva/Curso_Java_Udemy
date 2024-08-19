@@ -1,8 +1,10 @@
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 public class DataHora {
 
@@ -40,7 +42,9 @@ public class DataHora {
 		System.out.println(d09);
 		System.out.println(d10);
 		System.out.println(d11);
+		
 		System.out.println("");
+		
 		System.out.println(d04.format(fmt1));
 		System.out.println(fmt1.format(d04));
 		System.out.println(fmt2.format(d05));
@@ -53,8 +57,6 @@ public class DataHora {
 		LocalDate r2 = LocalDate.ofInstant(d06, ZoneId.of("Portugal"));
 		LocalDateTime r3 = LocalDateTime.ofInstant(d06, ZoneId.systemDefault());
 		LocalDateTime r4 = LocalDateTime.ofInstant(d06, ZoneId.of("Portugal"));
-
-
 		
 		System.out.println(r1);
 		System.out.println(r2);
@@ -68,17 +70,26 @@ public class DataHora {
 		System.out.println("d04 ano = " + d04.getYear());
 		
 		System.out.println("d05 hora = " + d05.getHour());
-
-
-
-
-
-
-
-
-
-
 		
+		LocalDate pastWeekLocalDate = d04.minusDays(7);
+		LocalDate nextWeekLocalDate = d04.plusDays(7);
+		
+		System.out.println("pastWeekLocalDate = " + pastWeekLocalDate);
+		System.out.println("nextWeekLocalDate = " + nextWeekLocalDate);
+		
+		System.out.println("");
+		
+		Instant pastWeekInstant = d06.minus(7, ChronoUnit.DAYS);
+		Instant nextWeekInstant = d06.plus(7, ChronoUnit.DAYS);
+		
+		System.out.println("pastWeekInstant = " + pastWeekInstant);
+		System.out.println("nextWeekInstant = " + nextWeekInstant);
+
+		System.out.println("");
+
+		Duration t1 = Duration.between(pastWeekLocalDate.atStartOfDay(), d04.atStartOfDay());
+		
+		System.out.println(t1.toDays());
 	}
 	
 }
