@@ -1,4 +1,7 @@
-package heranca;
+package polimorfismo;
+
+import heranca.Account;
+import heranca.SavingsAccount;
 
 public class Polimorfismo {
 
