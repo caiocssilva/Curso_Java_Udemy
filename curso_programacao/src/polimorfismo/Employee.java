@@ -7,7 +7,6 @@ public class Employee {
 	private Double valuePerHour;
 	
 	public Employee() {
-		super();
 	}
 	
 	public Employee(String name, Integer hours, Double valuePerHour) {
@@ -44,4 +43,5 @@ public class Employee {
 		return valuePerHour * hours;
 		
 	}
+	
 }

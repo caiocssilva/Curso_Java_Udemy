@@ -2,7 +2,11 @@ package polimorfismo;
 
 public class OutsourcedEmployee extends Employee {
 
-	private double additionalCharge;
+	private Double additionalCharge;
+	
+	public OutsourcedEmployee() {
+		super();
+	}
 
 	public OutsourcedEmployee(String name, Integer hours, Double valuePerHour, double additionalCharge) {
 		super(name, hours, valuePerHour);
